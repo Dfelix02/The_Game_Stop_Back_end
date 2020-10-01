@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 2020_09_28_030332) do
 
   create_table "scores", force: :cascade do |t|
     t.integer "highscore"
-    t.bigint "users_id", null: false
-    t.bigint "games_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["games_id"], name: "index_scores_on_games_id"
-    t.index ["users_id"], name: "index_scores_on_users_id"
+    t.index ["game_id"], name: "index_scores_on_game_id"
+    t.index ["user_id"], name: "index_scores_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,6 +38,6 @@ ActiveRecord::Schema.define(version: 2020_09_28_030332) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "scores", "games", column: "games_id"
-  add_foreign_key "scores", "users", column: "users_id"
+  add_foreign_key "scores", "games"
+  add_foreign_key "scores", "users"
 end
