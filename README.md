@@ -1,24 +1,17 @@
-# README
+# The Game Stop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website uses the power of grid and custom css in order to provide the user a games.
 
-Things you may want to cover:
+There is only one game implemented at the moment.
 
-* Ruby version
+Memorize - a car remembering game that test one's memory.
 
-* System dependencies
+Things to do before taking a look:
 
-* Configuration
+-bundle install
 
-* Database creation
+-rails db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+-rails s
 
 * ...
